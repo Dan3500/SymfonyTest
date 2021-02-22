@@ -1,0 +1,54 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+##RUTAS PARA EL USUARIO
+user:
+    path: /user
+    controller: App\Controller\UserController::index
+
+register:
+    path: /register
+    controller: App\Controller\UserController::create
+    methods: [POST]
+
+login:
+    path: /login
+    controller: App\Controller\UserController::login
+    methods: [POST]
+
+user-edit:
+    path: /user-edit
+    controller: App\Controller\UserController::edit
+    methods: [PUT]
+
+
+
+##RUTAS PARA EL VIDEOS
+video:
+    path: /video
+    controller: App\Controller\VideoController::index
+
+new-video:
+    path: /video/new
+    controller: App\Controller\VideoController::create
+    methods: [POST]
+
+edit-video:
+    path: /video/edit/{id}
+    controller: App\Controller\VideoController::create
+    methods: [PUT]
+
+video-list:
+    path: /video/list
+    controller: App\Controller\VideoController::videos
+    methods: [GET]
+
+video-detail:
+    path: /video/detail/{id}
+    controller: App\Controller\VideoController::video
+    methods: [GET]
+
+video-remove:
+    path: /video/remove/{id}
+    controller: App\Controller\VideoController::remove
+    methods: [DELETE]
